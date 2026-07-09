@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Theater Games</title>
+    <meta
+      name="description"
+      content="A browser-based theater game toolkit for mood check-ins, improvisation prompts, reflection, drawing, and a private emotion archive."
+    />
+    <meta name="theme-color" content="#fbf7fb" />
+    <meta property="og:title" content="Theater Games" />
+    <meta
+      property="og:description"
+      content="Choose a mood double, enter a theater practice, save reflections, and draw your current mood in a private browser archive."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <button class="brand" data-route="mood" aria-label="Go to mood check-in">
+          <span class="brand-mark"></span>
+          <span>Theater Games</span>
+        </button>
+        <nav class="nav-tabs" aria-label="Main navigation">
+          <button data-route="mood">Check-In</button>
+          <button data-route="games">Games</button>
+          <button data-route="archive">Archive</button>
+        </nav>
+      </header>
+
+      <main id="app" class="page" aria-live="polite"></main>
+    </div>
+
+    <template id="avatar-template">
+      <div class="avatar">
+        <div class="avatar-face">
+          <span class="eye left"></span>
+          <span class="eye right"></span>
+          <span class="mouth"></span>
+        </div>
+      </div>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
